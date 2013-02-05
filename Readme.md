@@ -12,7 +12,7 @@ Decode the weakly crypted password from the hipchat configuration file. The API 
 
 ## Example Usage
 
-```bash
+```
 $ hipchat-secrets
 Analyzing HipChat config: /Users/xxx/Library/Preferences/com.hipchat.xxx/Local Store/hipchatConfig.json
 
@@ -21,7 +21,7 @@ xxx@xxx.com's password is xxx
 
 
 
-```bash
+```
 $ hipchat-secrets /some/other/file/that/was/a/hipchatConfig.json
 Analyzing HipChat config: /some/other/file/that/was/a/hipchatConfig.json
 
@@ -31,7 +31,7 @@ xxx@xxx.com's password is xxx
 
 
 
-```bash
+```
 $ HIPCHAT_SECRET=IFoundTheSecret hipchat-secrets /some/other/file/that/was/a/hipchatConfig.json
 Analyzing HipChat config: /some/other/file/that/was/a/hipchatConfig.json
 
