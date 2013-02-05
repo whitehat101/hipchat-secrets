@@ -29,7 +29,7 @@ module HipChatSecrets
       return @@key if defined? @@key
       key_file = File.expand_path('~/.hipchat_secret')
 
-      self.secret =
+      send 'secret=',
         if ENV['HIPCHAT_SECRET']
           ENV['HIPCHAT_SECRET']
         elsif File.exists? key_file
@@ -40,7 +40,7 @@ module HipChatSecrets
     end
 
     def self.secret= key
-      @@key = key.unpack 'U*'
+      @@key = key.strip.unpack 'U*'
     end
 
     def self.secret_str
