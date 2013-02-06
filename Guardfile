@@ -1,7 +1,10 @@
 # More info at https://github.com/guard/guard#readme
 interactor :off
 
-guard 'bundler' do watch('Gemfile') end
+guard 'bundler' do
+  watch('Gemfile')
+  watch(%r{\.gemspec$})
+end
 
 guard 'rspec', cli: '--drb' do
   watch(%r{^spec/.+_spec\.rb$})
