@@ -36,8 +36,8 @@ describe HipChatSecrets::Crypt do
   end
 
   it "is symmetric even with long strings" do
-    subject.decode(subject.encode 'Hello, I noticed that you are reading my code. Enjoy and happy hacking!'*20)
-      .should eq 'Hello, I noticed that you are reading my code. Enjoy and happy hacking!'*20
+    str = 'Hello, I noticed that you are reading my code. Enjoy and happy hacking!'
+    subject.decode(subject.encode str*20).should eq str*20
   end
 
 end
