@@ -12,12 +12,16 @@ Decode the weakly crypted password from the hipchat configuration file. The API 
 
 ## Example Usage
 
+Automagical:
+
 ```
 $ hipchat-secrets
 Analyzing HipChat config: /Users/xxx/Library/Preferences/com.hipchat.xxx/Local Store/hipchatConfig.json
 
 xxx@xxx.com's password is xxx
 ```
+
+With non-standard config file location:
 
 ```
 $ hipchat-secrets /some/other/file/that/was/a/hipchatConfig.json
@@ -26,11 +30,16 @@ Analyzing HipChat config: /some/other/file/that/was/a/hipchatConfig.json
 xxx@xxx.com's password is xxx
 ```
 
-```
-$ HIPCHAT_SECRET=IFoundTheSecret hipchat-secrets /some/other/file/that/was/a/hipchatConfig.json
-Analyzing HipChat config: /some/other/file/that/was/a/hipchatConfig.json
+With secret from environment:
 
-xxx@xxx.com's password is xxx
+```
+$ HIPCHAT_SECRET=IFoundTheSecret hipchat-secrets
+```
+
+Windows:
+
+```
+> env HIPCHAT_SECRET=IFoundTheSecret hipchat-secrets
 ```
 
 
@@ -39,6 +48,7 @@ xxx@xxx.com's password is xxx
 - 1.8.7-p371
 - 1.9.2-p320
 - 1.9.3-p374
+- 2.0.0-rc1
 - jruby-1.7.0
 - jruby-1.7.2
 
