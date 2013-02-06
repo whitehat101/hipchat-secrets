@@ -23,9 +23,10 @@ module HipChatSecrets
     def find_configs additional_path=nil
       possible_configs = [
         additional_path,
-        "~/Library/Preferences/com.hipchat.*/Local Store/hipchatConfig.json",
-        # TODO: where does windows stash this file?
-        # TODO: where does linux stash this file?
+        "~/Library/Preferences/com.hipchat.87969878BBF1203EC547B61E69990E8273C4626D.1/Local Store/hipchatConfig.json", # OS X
+        "~/.appdata/com.hipchat.87969878BBF1203EC547B61E69990E8273C4626D.1/Local Store/hipchatConfig.json",            # Linux
+        "~/AppData/Roaming/com.hipchat.87969878BBF1203EC547B61E69990E8273C4626D.1/Local Store/hipchatConfig.json",     # Win 7
+        # TODO: where does older windows stash this file? does anyone care?
       ].compact.map {|path| File.expand_path path }
 
       Dir[*possible_configs]
