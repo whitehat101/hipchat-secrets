@@ -19,17 +19,12 @@ Analyzing HipChat config: /Users/xxx/Library/Preferences/com.hipchat.xxx/Local 
 xxx@xxx.com's password is xxx
 ```
 
-
-
 ```
 $ hipchat-secrets /some/other/file/that/was/a/hipchatConfig.json
 Analyzing HipChat config: /some/other/file/that/was/a/hipchatConfig.json
 
 xxx@xxx.com's password is xxx
 ```
-
-
-
 
 ```
 $ HIPCHAT_SECRET=IFoundTheSecret hipchat-secrets /some/other/file/that/was/a/hipchatConfig.json
@@ -38,6 +33,23 @@ Analyzing HipChat config: /some/other/file/that/was/a/hipchatConfig.json
 xxx@xxx.com's password is xxx
 ```
 
+
+## Tested against
+
+- 1.8.7-p371
+- 1.9.2-p320
+- 1.9.3-p374
+- jruby-1.7.0
+- jruby-1.7.2
+
+
+## Contributing
+
+1. Fork it
+2. Create your feature branch (`git checkout -b my-new-feature`)
+3. Commit your changes (`git commit -am 'Add some feature'`)
+4. Push to the branch (`git push origin my-new-feature`)
+5. Create new Pull Request
 
 ## Come on Atlassian
 

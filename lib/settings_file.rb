@@ -1,3 +1,4 @@
+# settings_file.rb
 require 'json'
 
 module HipChatSecrets
