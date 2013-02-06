@@ -1,3 +1,3 @@
-source ENV['LOCALGEMS'] or 'https://rubygems.org'
+source 'http://rubygems.org'
 
 gemspec
