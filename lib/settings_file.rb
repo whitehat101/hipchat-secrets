@@ -6,7 +6,9 @@ module HipChatSecrets
     attr_reader :config_file, :config
 
     def initialize setting_path=nil
-      @config_file = find_configs(setting_path).first
+      configs = find_configs(setting_path)
+      raise "Could not locate any config files." if configs.length < 1
+      @config_file = configs.first
       parse_config
     end
 
